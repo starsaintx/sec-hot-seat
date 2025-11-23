@@ -130,9 +130,14 @@ export default function HomePage() {
               </div>
               <div className="coach-main">
                 <div className="coach-top-row">
-                  <div>
-                    <p className="coach-team">{coach.team}</p>
-                    <p className="coach-name">{coach.coachName}</p>
+                  <div className="coach-title-row">
+                    <div className="coach-logo">
+                      <span>{coach.shortCode}</span>
+                    </div>
+                    <div>
+                      <p className="coach-team">{coach.team}</p>
+                      <p className="coach-name">{coach.coachName}</p>
+                    </div>
                   </div>
                   <span className={`heat-badge heat-${coach.hotSeatLevel}`}>
                     {levelLabel(coach.hotSeatLevel)}
